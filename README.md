@@ -18,7 +18,7 @@
 <body>
 
 <div class="card">
-    <h2>Edge Native Splitter</h2>
+    <h2>gtnocayt's gif to rblx gui converter</h2>
     <div class="drop-zone" id="dz">Click to Upload GIF</div>
     <input type="file" id="fi" accept="image/gif" style="display:none">
     <div id="status">Ready.</div>
