@@ -109,8 +109,18 @@
     };
 
     function updateCount() {
-        const remaining = frames.filter(f => f !== null).length;
-        status.innerText = `${remaining} frames ready for export.`;
+        let currentNumber = 1;
+        const items = preview.children;
+        
+        // Loop through everything and re-number only the active ones
+        for (let i = 0; i < frames.length; i++) {
+            if (frames[i] !== null) {
+                items[i].querySelector('.frame-idx').innerText = currentNumber;
+                currentNumber++;
+            }
+        }
+        
+        status.innerText = `${currentNumber - 1} frames ready for export.`;
     }
 
     dl.onclick = async () => {
